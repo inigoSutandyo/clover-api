@@ -20,8 +20,8 @@ class PostSeeder extends Seeder
         for ($i=0; $i < 20; $i++) {
             $c = Community::inRandomOrder()->first();
             Post::create([
-                "name" => "Random Post " . ($i+1),
-                "description" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, molestias animi ad distinctio est aperiam eligendi optio fugit, recusandae sunt officia at illum inventore eaque perferendis dolores ullam hic enim.",
+                "title" => "Random Post " . ($i+1),
+                "content" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, molestias animi ad distinctio est aperiam eligendi optio fugit, recusandae sunt officia at illum inventore eaque perferendis dolores ullam hic enim.",
                 "user_id" => 1,
                 "community_id" => $c->id,
             ]);

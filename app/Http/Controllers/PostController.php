@@ -10,8 +10,8 @@ class PostController extends Controller
     //
 
     public function index(Request $request) {
-        $posts = Post::all();
-        return response()->json("HELLO WORLD");
+        $posts = Post::with("user")->paginate(10);
+        return response()->json($posts);
     }
 
     public function add(Request $request) {
